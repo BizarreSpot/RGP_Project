@@ -9,6 +9,8 @@ public class Player_Controller : MonoBehaviour
 
     private Rigidbody2D RigidB;
     private Vector2 moveVel;
+
+    public bool Lock_Controls;
     void Start()
     {
         RigidB = GetComponent<Rigidbody2D>();
@@ -16,12 +18,20 @@ public class Player_Controller : MonoBehaviour
 
     void Update()
     {
-        idle_Player();
-        Player_Animator.SetFloat("Vertical_Run", Input.GetAxisRaw("Vertical"));
-        Player_Animator.SetFloat("Horizontal_Run", Input.GetAxisRaw("Horizontal"));
         Vector2 MoveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        moveVel = MoveInput.normalized * speed;
-
+        if (!Lock_Controls) 
+        {
+            idle_Player();
+            Player_Animator.SetFloat("Vertical_Run", Input.GetAxisRaw("Vertical"));
+            Player_Animator.SetFloat("Horizontal_Run", Input.GetAxisRaw("Horizontal"));
+            moveVel = MoveInput.normalized * speed;
+        }
+        else
+        {
+            Player_Animator.SetFloat("Vertical_Run", 0);
+            Player_Animator.SetFloat("Horizontal_Run", 0);
+            moveVel = MoveInput.normalized * 0;
+        }
     }
 
     void FixedUpdate()

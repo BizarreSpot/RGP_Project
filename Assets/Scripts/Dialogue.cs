@@ -4,6 +4,8 @@ using TMPro;
 
 public class Dialogue : MonoBehaviour
 {
+    public Player_Controller Player;
+
     [SerializeField] private GameObject Dialogue_Mark;
     [SerializeField] private GameObject Dialogue_Panel;
     [SerializeField] private TMP_Text Dialogue_Text;
@@ -17,6 +19,13 @@ public class Dialogue : MonoBehaviour
 
     void Update()
     {
+
+        if (Player == null)
+        {
+            return;
+        }
+
+
         if ( isPlayerInRange && Input.GetButtonDown("Fire1"))
         {
             if (!DidDialogueStart)
@@ -32,6 +41,7 @@ public class Dialogue : MonoBehaviour
 
     private void Start_Dialogue()
     {
+        Player.Lock_Controls = true;
         DidDialogueStart = true;
         Dialogue_Panel.SetActive(true);
         Dialogue_Mark.SetActive(false);
@@ -48,6 +58,7 @@ public class Dialogue : MonoBehaviour
         }
         else
         {
+            Player.Lock_Controls = false;
             DidDialogueStart = false;
             Dialogue_Panel.SetActive(false);
             Dialogue_Mark.SetActive(true);

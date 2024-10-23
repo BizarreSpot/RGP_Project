@@ -11,8 +11,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Enemy_Layer
+  - Player_Layer
   - 
   - 
   - 
@@ -43,4 +43,7 @@ TagManager:
     locked: 0
   - name: Player_Layer
     uniqueID: 3156720611
+    locked: 0
+  - name: UI_Elements
+    uniqueID: 3360073965
     locked: 0
