@@ -11,11 +11,10 @@ GameObject:
   - component: {fileID: 1788229629988463046}
   - component: {fileID: 3892700590874727387}
   - component: {fileID: 4755491466715805261}
-  - component: {fileID: 6222008467535872958}
-  - component: {fileID: 7789373032110108512}
-  - component: {fileID: 7325930517287903425}
-  m_Layer: 6
-  m_Name: Enemy
+  - component: {fileID: 2739664797790823840}
+  - component: {fileID: 1723675241028633486}
+  m_Layer: 8
+  m_Name: PED
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,7 +34,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1569223551461889966}
-  - {fileID: 2642409334787998941}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &3892700590874727387
@@ -110,7 +108,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.95, y: 1.64}
   m_EdgeRadius: 0
---- !u!114 &6222008467535872958
+--- !u!114 &2739664797790823840
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,17 +117,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 4536302613203575888}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bae2fbc3d0dd13a4fbb40fd21052bad2, type: 3}
+  m_Script: {fileID: 11500000, guid: 0bcea041ee6a040499f33bbb38bc9268, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy_Animator: {fileID: 3867991336139725193}
+  PED_Animator: {fileID: 3867991336139725193}
   speed: 5
   stoppingDistance: 1.08
   Follow_Limit: 5.16
-  Attack: 0
   Orientation: {x: 0, y: 0}
-  Enemy_Status: 3
---- !u!114 &7789373032110108512
+  PED_Status: 1
+--- !u!114 &1723675241028633486
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -138,29 +135,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4536302613203575888}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e79b5be5e54917a4186f5c3a0eb253fe, type: 3}
+  m_Script: {fileID: 11500000, guid: 404d4935bd21d1d44ade4674134add08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy: {fileID: 6222008467535872958}
-  Enemy_Health_Num: 1
---- !u!114 &7325930517287903425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4536302613203575888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 233052f4a5c455345a184d7d2036fab6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Enemy: {fileID: 6222008467535872958}
-  Attack_Range: 1.04
-  Player_Layer:
-    serializedVersion: 2
-    m_Bits: 128
-  Attack_Point: {fileID: 2642409334787998941}
+  PED: {fileID: 2739664797790823840}
+  PED_Health_Num: 1
 --- !u!1 &6906361672522048150
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,8 +151,8 @@ GameObject:
   - component: {fileID: 1569223551461889966}
   - component: {fileID: 1968036403165513539}
   - component: {fileID: 3867991336139725193}
-  m_Layer: 6
-  m_Name: Enemy_Sprite
+  m_Layer: 8
+  m_Name: PED_Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -236,7 +215,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2138059987, guid: 5afd0831bf04d844b945903efd566e0d, type: 3}
-  m_Color: {r: 1, g: 0.0990566, b: 0.0990566, a: 1}
+  m_Color: {r: 0.6462264, g: 1, b: 0.7911061, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -267,34 +246,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!1 &8069643396467010569
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2642409334787998941}
-  m_Layer: 6
-  m_Name: Attack_Point
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2642409334787998941
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8069643396467010569}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1788229629988463046}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

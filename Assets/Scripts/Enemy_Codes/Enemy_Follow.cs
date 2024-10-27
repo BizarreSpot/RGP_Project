@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Enemy_Follow : MonoBehaviour
 {
-
+    public Coins_System System;
     public Animator Enemy_Animator;
+
     public float speed;
     public float stoppingDistance;
     public float Follow_Limit;
@@ -14,12 +15,44 @@ public class Enemy_Follow : MonoBehaviour
 
     private Transform target;
     public Vector2 Orientation;
-    
+
+    public int Enemy_Status = 1;
+
+
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
     void Update()
+    {
+        switch (Enemy_Status)
+        {
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                Enemy_Follow_Player();
+                break;
+            case 4:
+                StartCoroutine(Enemy_Death());
+                break;
+            default:
+                break;
+        }
+    }
+
+    IEnumerator Enemy_Death()
+    {
+        Enemy_Animator.SetBool("Death", true);
+        yield return new WaitForSeconds(.4f);
+        System.Add_Points(3, 1);
+        Destroy(gameObject);
+    }
+
+
+
+    public void Enemy_Follow_Player()
     {
 
         orientation_Enemy();
@@ -33,12 +66,12 @@ public class Enemy_Follow : MonoBehaviour
             Enemy_Animator.SetFloat("Horizontal_Run", Orientation.x);
 
             transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-            
+
             if (Vector2.Distance(transform.position, target.position) <= stoppingDistance)
             {
                 Attack = true;
             }
-        
+
         }
         else
         {
@@ -47,7 +80,6 @@ public class Enemy_Follow : MonoBehaviour
         }
 
     }
-
     void orientation_Enemy()
     {
         Orientation = transform.position - target.transform.position;
@@ -103,10 +135,12 @@ public class Enemy_Follow : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, Follow_Limit);
+        Gizmos.DrawWireSphere(transform.localPosition, Follow_Limit);
 
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, stoppingDistance);
+        Gizmos.DrawWireSphere(transform.localPosition, stoppingDistance);
     }
+
+
 
 }

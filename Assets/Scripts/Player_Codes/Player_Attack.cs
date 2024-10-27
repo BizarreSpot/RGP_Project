@@ -7,6 +7,7 @@ public class Player_Attack : MonoBehaviour
     public Player_Controller Player;
     public float Attack_Range;
     public LayerMask Enemy_Layer;
+    public LayerMask PED_Layer;
     public Transform Attack_Point;
 
 
@@ -38,12 +39,19 @@ public class Player_Attack : MonoBehaviour
 
 
         Collider2D[] hit_Enemies = Physics2D.OverlapCircleAll(Attack_Point.position, Attack_Range, Enemy_Layer);
+        Collider2D[] hit_PEDs = Physics2D.OverlapCircleAll(Attack_Point.position, Attack_Range, PED_Layer);
 
-    foreach (Collider2D enemy in hit_Enemies)
+        foreach (Collider2D PED in hit_PEDs)
+        {
+            PED.GetComponent<PED_Health>().Damage();
+        }
+
+
+        foreach (Collider2D enemy in hit_Enemies)
         {
             enemy.GetComponent<Enemy_Health>().Damage();
         }
-    
+
     }
 
 

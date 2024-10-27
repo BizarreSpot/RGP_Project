@@ -8,6 +8,7 @@ public class Enemy_Attack : MonoBehaviour
     public float Attack_Range;
     public LayerMask Player_Layer;
     public Transform Attack_Point;
+    private bool Attack_Bool;
 
 
     // Update is called once per frame
@@ -16,8 +17,7 @@ public class Enemy_Attack : MonoBehaviour
         Attack_Point_Position();
         if (Enemy.Attack)
         {
-            Attack();
-            Enemy.Attack = false;
+            StartCoroutine(Enemy_Cooldown());
         }
         else
         {
@@ -40,6 +40,14 @@ public class Enemy_Attack : MonoBehaviour
             Player.GetComponent<Player_Lifes>().Damage_Player();
         }
 
+    }
+
+    IEnumerator Enemy_Cooldown()
+    {
+        Attack();
+        Enemy.Attack = false;
+        yield return new WaitForSeconds(2F);
+        Enemy.Attack = true;
     }
 
 

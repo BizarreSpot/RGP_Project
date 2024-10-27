@@ -14,15 +14,24 @@ public class Next_Level : MonoBehaviour
 
         if (isPlayerInRange && Input.GetButtonDown("Fire1"))
         {
-            Debug_Level();
+            switch (Level_Selector)
+            {
+                case 1:
+                    SceneManager.LoadScene("Level_1");
+                    break;
+                case 2:
+                    SceneManager.LoadScene("Level_2");
+                    break;
+                case 3:
+                    SceneManager.LoadScene("Level_3");
+                    break;
+                default:
+                    SceneManager.LoadScene("Debug");
+                    break;
+            }
+
         }
 
-    }
-
-
-    void Debug_Level()
-    {
-        SceneManager.LoadScene("Debug");
     }
 
 

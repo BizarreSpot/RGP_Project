@@ -4,21 +4,24 @@ using UnityEngine;
 
 public class Enemy_Health : MonoBehaviour
 {
-
     public Enemy_Follow Enemy;
     public int Enemy_Health_Num = 1;
         
     void Update()
     {
 
+
         if (Enemy_Health_Num == 0)
         {
-            Destroy(gameObject);
+            Enemy.Enemy_Status = 4;
         }
     }
 
     public void Damage()
     {
-        Enemy_Health_Num -= 1; 
-    }
+        if (Enemy.Enemy_Status == 3)
+        {
+            Enemy_Health_Num -= 1;
+        }
+        }
 }
