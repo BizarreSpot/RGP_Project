@@ -42,12 +42,17 @@ public class Enemy_Follow : MonoBehaviour
         }
     }
 
+    public void Enemy_Behaviour(int Behaviour)
+    {
+        Enemy_Status = Behaviour;
+    }
+
     IEnumerator Enemy_Death()
     {
         Enemy_Animator.SetBool("Death", true);
         yield return new WaitForSeconds(.4f);
         System.Add_Points(3, 1);
-        Destroy(gameObject);
+        this.gameObject.SetActive(false);
     }
 
 

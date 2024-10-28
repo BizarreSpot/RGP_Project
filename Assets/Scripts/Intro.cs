@@ -2,36 +2,30 @@ using System.Collections;
 using UnityEngine;
 using TMPro;
 
-public class Dialogue : MonoBehaviour
+public class Intro : MonoBehaviour
 {
-    public Coins_System Timer;
-    public Player_Controller Player;
+    public Level_Selector Level;
+    public string Level_Selection;
 
-    [SerializeField] private GameObject Dialogue_Mark;
     [SerializeField] private GameObject Dialogue_Panel;
     [SerializeField] private TMP_Text Dialogue_Text;
     [SerializeField, TextArea(4,6)] private string[] Dialogue_Lines;
 
     private float Typing_Time = 0.005f;
-
-    private bool isPlayerInRange;
-    private bool DidDialogueStart;
+    
+    private bool First_Time = true;
+    public bool DidDialogueStart;
     private int Line_Index;
 
     void Update()
     {
 
-        if (Player == null)
-        {
-            return;
-        }
 
-
-        if ( isPlayerInRange && Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") || First_Time)
         {
+            First_Time = false;
             if (!DidDialogueStart)
             {
-                Timer.Counter_Status(true);
                 Start_Dialogue();
             }
             else if (Dialogue_Text.text == Dialogue_Lines[Line_Index]){
@@ -43,10 +37,8 @@ public class Dialogue : MonoBehaviour
 
     private void Start_Dialogue()
     {
-        Player.Lock_Controls = true;
         DidDialogueStart = true;
         Dialogue_Panel.SetActive(true);
-        Dialogue_Mark.SetActive(false);
         Line_Index = 0;
         StartCoroutine(Show_Line());
     }
@@ -60,11 +52,9 @@ public class Dialogue : MonoBehaviour
         }
         else
         {
-            Player.Lock_Controls = false;
             DidDialogueStart = false;
             Dialogue_Panel.SetActive(false);
-            Dialogue_Mark.SetActive(true);
-            Timer.Counter_Status(false);
+            Level.Load_Levels(Level_Selection);
         }
     }
 
@@ -75,23 +65,6 @@ public class Dialogue : MonoBehaviour
         {
             Dialogue_Text.text += Ch;
             yield return new WaitForSeconds(Typing_Time);        
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Player")
-        {
-            isPlayerInRange = true;
-            Dialogue_Mark.SetActive(true);
-        }
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.tag == "Player")
-        {
-            isPlayerInRange = false;
-            Dialogue_Mark.SetActive(false);
         }
     }
 }

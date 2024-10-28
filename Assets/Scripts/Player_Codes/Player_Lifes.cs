@@ -37,9 +37,15 @@ public class Player_Lifes : MonoBehaviour
     }
 
 
-    void GameOver()
+    public void GameOver()
     {
         GameOver_Panel.gameObject.SetActive(true);
+        Player.Lock_Controls = true;
+        Fade.SetBool("Game_Over", true);
+    }
+
+    public void Finish_Game()
+    {
         Player.Lock_Controls = true;
         Fade.SetBool("Game_Over", true);
     }

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Next_Level : MonoBehaviour
 {
     [SerializeField] private GameObject Portal_Mark;
+    public Player_Lifes Player_Status;
     private bool isPlayerInRange;
 
     public int Level_Selector;
@@ -17,16 +18,16 @@ public class Next_Level : MonoBehaviour
             switch (Level_Selector)
             {
                 case 1:
-                    SceneManager.LoadScene("Level_1");
+                    StartCoroutine(Load_Level("Level_1"));
                     break;
                 case 2:
-                    SceneManager.LoadScene("Level_2");
+                    StartCoroutine(Load_Level("Level_2"));
                     break;
                 case 3:
-                    SceneManager.LoadScene("Level_3");
+                    StartCoroutine(Load_Level("Level_3"));
                     break;
                 default:
-                    SceneManager.LoadScene("Debug");
+                    StartCoroutine(Load_Level("Debug"));
                     break;
             }
 
@@ -34,6 +35,13 @@ public class Next_Level : MonoBehaviour
 
     }
 
+    IEnumerator Load_Level(string Level)
+    {
+        Player_Status.Finish_Game();
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(Level);
+
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
