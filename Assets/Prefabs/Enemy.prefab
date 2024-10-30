@@ -122,10 +122,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bae2fbc3d0dd13a4fbb40fd21052bad2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  System: {fileID: 0}
   Enemy_Animator: {fileID: 3867991336139725193}
   speed: 5
-  stoppingDistance: 1.08
-  Follow_Limit: 5.16
+  stoppingDistance: 0.89
+  Follow_Limit: 17.51
   Attack: 0
   Orientation: {x: 0, y: 0}
   Enemy_Status: 3
