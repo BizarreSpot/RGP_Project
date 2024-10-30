@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,7 +121,259 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: CIVIL 2_0
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 3098
+        width: 223
+        height: 644
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a3e1c3753e16194aaa7edb244134eed
+      internalID: 920404179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CIVIL 2_1
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 3147
+        width: 235
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40286006515fc9d44ad3848e9ea2ede3
+      internalID: 849744796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CIVIL 2_2
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 3098
+        width: 225
+        height: 644
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76d3595f6ba30a446be9ac4b5b1b0456
+      internalID: 945182502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CIVIL 2_3
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 2138
+        width: 283
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ec793fdade7ec84da8efd4cfe226c00
+      internalID: 406904892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CIVIL 2_4
+      rect:
+        serializedVersion: 2
+        x: 988
+        y: 2138
+        width: 164
+        height: 633
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b4829cb3ae725f4ab53062c8ddd7569
+      internalID: 1542789652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CIVIL 2_5
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 2138
+        width: 286
+        height: 624
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e484c0a57a449f4c936f8ed1396e8d8
+      internalID: -1488857883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CIVIL 2_6
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 1178
+        width: 283
+        height: 624
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1122d18f3853ef448aee52b10e5e0704
+      internalID: 1200244214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CIVIL 2_7
+      rect:
+        serializedVersion: 2
+        x: 957
+        y: 1178
+        width: 165
+        height: 633
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e1f074003a003d48abd18c01ac6c4e7
+      internalID: 512120060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CIVIL 2_8
+      rect:
+        serializedVersion: 2
+        x: 1617
+        y: 1178
+        width: 286
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6737531e95cee049b59c83a15cafc2f
+      internalID: 1563248241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CIVIL 2_9
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 228
+        width: 225
+        height: 623
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a276b475e77f4d42966cc5f834e7407
+      internalID: 233671228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CIVIL 2_10
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 277
+        width: 234
+        height: 595
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74691290564e9a142b15ed43e7c8bf28
+      internalID: -273688902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CIVIL 2_11
+      rect:
+        serializedVersion: 2
+        x: 1659
+        y: 228
+        width: 223
+        height: 623
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2377e9dc2f1adb346945f404948b7ad8
+      internalID: -404073601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +384,19 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      CIVIL 2_0: 920404179
+      CIVIL 2_1: 849744796
+      CIVIL 2_10: -273688902
+      CIVIL 2_11: -404073601
+      CIVIL 2_2: 945182502
+      CIVIL 2_3: 406904892
+      CIVIL 2_4: 1542789652
+      CIVIL 2_5: -1488857883
+      CIVIL 2_6: 1200244214
+      CIVIL 2_7: 512120060
+      CIVIL 2_8: 1563248241
+      CIVIL 2_9: 233671228
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
