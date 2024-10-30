@@ -1736,6 +1736,10 @@ PrefabInstance:
       propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4237653363154499036, guid: da1132eafd9cc8048bc5e065b156c7a8, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6399058650823160357, guid: da1132eafd9cc8048bc5e065b156c7a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1774,6 +1778,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6399058650823160357, guid: da1132eafd9cc8048bc5e065b156c7a8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6657869042836956535, guid: da1132eafd9cc8048bc5e065b156c7a8, type: 3}
+      propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7846858775364124769, guid: da1132eafd9cc8048bc5e065b156c7a8, type: 3}
@@ -1858,7 +1866,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2356864003233717564, guid: bdcd61be32c347f469687bc763b12496, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2448783334799528090, guid: bdcd61be32c347f469687bc763b12496, type: 3}
       propertyPath: m_Sprite

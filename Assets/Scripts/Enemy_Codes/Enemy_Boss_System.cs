@@ -20,7 +20,7 @@ public class Enemy_Boss_System : MonoBehaviour
         for (int i = 0; i <= Enemys.Length; i++) 
         {
 
-            if (Game_Status.Points_Enemys >= i)
+            if (Game_Status.Points_Enemys >= i && i <= Enemys.Length-1)
             {
                 Enemys[i].GetComponent<Enemy_Follow>().Enemy_Behaviour(3);
 }

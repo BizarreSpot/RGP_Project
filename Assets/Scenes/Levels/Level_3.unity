@@ -1516,6 +1516,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Level_3
       objectReference: {fileID: 0}
+    - target: {fileID: 9050202396585574506, guid: da1132eafd9cc8048bc5e065b156c7a8, type: 3}
+      propertyPath: Attack_Range
+      value: 1.44
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
