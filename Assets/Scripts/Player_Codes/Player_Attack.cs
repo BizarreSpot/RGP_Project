@@ -10,13 +10,14 @@ public class Player_Attack : MonoBehaviour
     public LayerMask PED_Layer;
     public Transform Attack_Point;
 
+    // Añadir referencia al script de sonido de ataque
+    public AttackSound attackSound;
 
     // Update is called once per frame
     void Update()
     {
         if (!Player.Lock_Controls)
         {
-
             Attack_Point_Position();
             if (Input.GetButtonDown("Jump"))
             {
@@ -27,16 +28,17 @@ public class Player_Attack : MonoBehaviour
                 Player.Player_Animator.ResetTrigger("Attack");
             }
         }
-
-
     }
 
     void Attack()
     {
+        Player.Player_Animator.SetTrigger("Attack");
 
-            Player.Player_Animator.SetTrigger("Attack");
-
-
+        // Reproducir sonido de ataque
+        if (attackSound != null)
+        {
+            attackSound.PlayAttackSound();
+        }
 
         Collider2D[] hit_Enemies = Physics2D.OverlapCircleAll(Attack_Point.position, Attack_Range, Enemy_Layer);
         Collider2D[] hit_PEDs = Physics2D.OverlapCircleAll(Attack_Point.position, Attack_Range, PED_Layer);
@@ -46,14 +48,11 @@ public class Player_Attack : MonoBehaviour
             PED.GetComponent<PED_Health>().Damage();
         }
 
-
         foreach (Collider2D enemy in hit_Enemies)
         {
             enemy.GetComponent<Enemy_Health>().Damage();
         }
-
     }
-
 
     void Attack_Point_Position()
     {
@@ -84,8 +83,6 @@ public class Player_Attack : MonoBehaviour
                 break;
             default: break;
         }
-
-
     }
 
     private void OnDrawGizmosSelected()
@@ -97,5 +94,4 @@ public class Player_Attack : MonoBehaviour
 
         Gizmos.DrawWireSphere(Attack_Point.position, Attack_Range);
     }
-
 }

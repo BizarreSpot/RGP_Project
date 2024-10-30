@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4755491466715805261}
   - component: {fileID: 2739664797790823840}
   - component: {fileID: 1723675241028633486}
+  - component: {fileID: 1246601877541600315}
   m_Layer: 8
   m_Name: PED
   m_TagString: Untagged
@@ -127,6 +128,7 @@ MonoBehaviour:
   Follow_Limit: 5.16
   Orientation: {x: 0, y: 0}
   PED_Status: 1
+  deathSound: {fileID: 0}
 --- !u!114 &1723675241028633486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,6 +143,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PED: {fileID: 2739664797790823840}
   PED_Health_Num: 1
+--- !u!114 &1246601877541600315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4536302613203575888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8c31da6f424a0840aab762a00152e6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  deathSoundClip: {fileID: 0}
 --- !u!1 &6906361672522048150
 GameObject:
   m_ObjectHideFlags: 0

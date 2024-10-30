@@ -21,6 +21,7 @@ public class PED_Follow : MonoBehaviour
     private Rigidbody2D RigidB;
     private Vector2 moveVel;
 
+    public DeathSound deathSound;
 
     void Start()
     {
@@ -45,6 +46,12 @@ public class PED_Follow : MonoBehaviour
     IEnumerator PED_Death()
     {
         PED_Animator.SetBool("Death", true);
+
+        if (deathSound != null)
+        {
+            deathSound.PlayDeathSound();
+        }
+
         yield return new WaitForSeconds(.4f);
         System.Timer += 5;
         System.Add_Points(2, 1);
