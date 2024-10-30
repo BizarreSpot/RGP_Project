@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bcea041ee6a040499f33bbb38bc9268, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  System: {fileID: 0}
   PED_Animator: {fileID: 3867991336139725193}
   speed: 5
   stoppingDistance: 1.08
@@ -235,7 +236,7 @@ Animator:
   m_GameObject: {fileID: 6906361672522048150}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 11fa9a1d610a0464ba4f18112f771e19, type: 2}
+  m_Controller: {fileID: 9100000, guid: 666a759768fc42946b6859e4d42b10f2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

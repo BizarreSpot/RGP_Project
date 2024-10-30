@@ -26,6 +26,9 @@ public class Next_Level : MonoBehaviour
                 case 3:
                     StartCoroutine(Load_Level("Level_3"));
                     break;
+                case 4:
+                    StartCoroutine(Load_Level("Ganaste"));
+                    break;
                 default:
                     StartCoroutine(Load_Level("Debug"));
                     break;

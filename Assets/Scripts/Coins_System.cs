@@ -16,7 +16,7 @@ public class Coins_System : MonoBehaviour
     [Header("Timer")]
     public TextMeshProUGUI Timer_Text;
     public float Timer_Start;
-    private float Timer;
+    public float Timer;
     private bool Pause_Timer;
 
     [Header("Points Config")]

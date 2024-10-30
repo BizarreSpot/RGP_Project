@@ -46,6 +46,7 @@ public class PED_Follow : MonoBehaviour
     {
         PED_Animator.SetBool("Death", true);
         yield return new WaitForSeconds(.4f);
+        System.Timer += 5;
         System.Add_Points(2, 1);
         Destroy(gameObject);
     }
